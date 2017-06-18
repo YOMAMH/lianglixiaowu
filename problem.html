@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        我的管理-客户服务-问题管理
+    </title>
+    <link href="stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/font-awesome.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/se7en-font.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/datatables.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/datepicker.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/loding.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/pagination.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+    <script src="pagination/js/jquery.pagination.min.js"></script>
+    <script src="javascripts/common/include-html.js" type="text/javascript"></script>
+    <script src="javascripts/common/properties.js" type="text/javascript"></script>
+    <script src="javascripts/main/problem.js" type="text/javascript"></script>
+    <script src="bower_components/artTemplate/dist/template.js"></script>
+    <link href="css/problem.min.css" media="all" rel="stylesheet" type="text/css" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+</head>
+<body>
+<div class="modal-shiftfix">
+    <!-- Navigation -->
+    <div fragment="fragment/header.html"></div>
+    <!-- End Navigation -->
+    <div class="container-fluid ">
+        <!-- DataTables Example -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="widget-container fluid-height clearfix" style="padding-bottom: 20px;">
+
+                    <div class="heading">
+                        <i class="icon-table"></i>客户服务管理-问题管理<a class="btn btn-sm btn-primary-outline pull-right" id = "add-pic" href="javascript:void(0);" ><i class="fa fa-plus-square"></i><span>添加</span></a>
+                    </div>
+                    <div class="widget-content padded">
+
+                        <!--<div class="form-group col-md-4"></div>
+                        <div class="form-group col-md-4"></div>-->
+                        <div class="form-group col-md-12">
+
+                            <label class="control-label col-md-1" style="margin-top: 5px;font-size: 16px;margin-right: -20px;">问题名称:
+                            </label>
+                            <div class="col-md-2">
+                                <input class="form-control" type="text"></div>
+                            <div class="col-md-1"></div>
+                            <label class="control-label col-md-1" style="margin-top: 5px;font-size: 16px;margin-right: -20px;">问题类别:
+                            </label>
+                            <div class="col-md-2">
+                                <input class="form-control" type="text"></div>
+                            <div class="col-md-1"></div>
+                            <button class="btn btn-primary col-md-1" type="submit" style="height: 34px;">查找<i class="fa fa-search" style="margin-left: 3px"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget-content padded clearfix problemCtx">
+                <table class="table table-bordered table-striped" id="datatable-editable">
+                    <thead>
+                    <tr>
+                        <td width="342">ID</td>
+                        <td class="hidden-xs" width="342">问题名称</td>
+                        <td class="hidden-xs" width="342">类别</td>
+                        <td class="hidden-xs" width="342">问题回复</td>
+                        <td width="60" class="col-md-1" width="136"></td>
+                        <td width="75" class="col-md-1" width="136"></td>
+                    </tr>
+                    </thead>
+                    <tbody class="proContain"></tbody>
+                </table>
+            </div>
+            <!--底部分页-->
+            <div class="pagination">
+                <div class="M-box3"></div>
+            </div>
+        </div>
+
+    </div>
+    <div fragment="fragment/footer.html"></div>
+</div>
+<div class="hostInfoRequestResView"></div>
+<!--loding-->
+<div class="conver">
+    <div class="conContent"></div>
+</div>
+<!--视图控制-->
+<script id="proView" type="text/html">
+    {{each entities as value i}}
+    <tr>
+        <td>{{value.id}}</td>
+        <td>{{value.title}}</td>
+        <td>{{value.typeId}}</td>
+        <td>{{value.content}}</td>
+        <td ><a class="edit-row" href="javascript:void(0);">编辑</a></td>
+        <td ><a class="delete-row" href="javascript:void(0);">删除</a></td>
+    </tr>
+    {{/each}}
+</script>
+
+<!--数据获取-->
+<script src="javascripts/problem.min.js" type="text/javascript"></script>
+</body>
+</html>

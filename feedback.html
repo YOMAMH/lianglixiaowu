@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        我的管理-留言板管理
+    </title>
+    <link href="stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/font-awesome.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/se7en-font.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/datatables.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/datepicker.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
+
+    <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+    <script src="javascripts/jquery-ui.js" type="text/javascript"></script>
+    <script src="javascripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="javascripts/common/include-html.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="javascripts/feedback-editable.js" type="text/javascript"></script>
+    <script src="javascripts/fullcalendar.min.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.easy-pie-chart.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.isotope.min.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="javascripts/select2.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.inputmask.min.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.validate.js" type="text/javascript"></script>
+    <script src="javascripts/bootstrap-fileupload.js" type="text/javascript"></script>
+    <script src="javascripts/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.sparkline.min.js" type="text/javascript"></script>
+    <script src="javascripts/main.js" type="text/javascript"></script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+</head>
+<body>
+<div class="modal-shiftfix">
+    <!-- Navigation -->
+    <div fragment="fragment/header.html"></div>
+    <!-- End Navigation -->
+    <div class="container-fluid ">
+        <!-- DataTables Example -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="widget-container fluid-height clearfix" style="padding-bottom: 20px;">
+
+                    <div class="heading">
+                        <i class="icon-table"></i>留言板管理
+                    </div>
+                    <div class="widget-content padded">
+
+                        <!--<div class="form-group col-md-4"></div>
+                        <div class="form-group col-md-4"></div>-->
+                        <div class="form-group col-md-12">
+
+                            <label class="control-label col-md-1" style="margin-top: 5px;font-size: 16px;margin-right: -20px;">用户ID:
+                            </label>
+                            <div class="col-md-2">
+                                <input class="form-control" type="text"></div>
+
+                            <label class="control-label col-md-2" style="margin-top: 5px;font-size: 16px;margin-right: -100px;">留言时间:
+                            </label>
+                            <div class="col-md-3">
+                                <div class="input-group date datepicker">
+                                    <input class="form-control" type="text"><span class="input-group-addon"><i class="icon-calendar"></i></span></input>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1"></div>
+                            <button class="btn btn-primary col-md-1" type="submit" style="height: 34px;">查找</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget-content padded clearfix">
+                <table class="table table-bordered table-striped" id="datatable-editable">
+                    <thead>
+                    <th>
+                        ID
+                    </th>
+                    <th class="hidden-xs">
+                        标题
+                    </th>
+                    <th class="hidden-xs">
+                        用户ID
+                    </th>
+                    <th class="hidden-xs">
+                        联系方式
+                    </th>
+                    <th class="hidden-xs">
+                        留言时间
+                    </th>
+                    <th class="hidden-xs">
+                        留言内容
+                    </th>
+                    <th width="60" >
+
+                    </th>
+                    <th width="75" >
+
+                    </th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            xyd001
+                        </td>
+                        <td>
+                        问题111
+                    </td>
+                        <td>
+                            xyd0011456
+                        </td>
+                        <td>
+                            18568592365
+                        </td>
+                        <td class="hidden-xs">
+                            2017-1-18 11:15
+                        </td>
+                        <td class="hidden-xs">
+                            这是XX类问题，包括。。。
+                        </td>
+                        <td >
+                            <a class="edit-row" href="#">编辑</a>
+                        </td>
+                        <td >
+                            <a class="delete-row" href="#">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            xyd001
+                        </td>
+                        <td>
+                            问题111
+                        </td>
+                        <td>
+                            xyd0011456
+                        </td>
+                        <td>
+                            18568592365
+                        </td>
+                        <td class="hidden-xs">
+                            2017-1-18 11:15
+                        </td>
+                        <td class="hidden-xs">
+                            这是XX类问题，包括。。。
+                        </td>
+                        <td >
+                            <a class="edit-row" href="#">编辑</a>
+                        </td>
+                        <td >
+                            <a class="delete-row" href="#">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            xyd001
+                        </td>
+                        <td>
+                            问题111
+                        </td>
+                        <td>
+                            xyd0011456
+                        </td>
+                        <td>
+                            18568592365
+                        </td>
+                        <td class="hidden-xs">
+                            2017-1-18 11:15
+                        </td>
+                        <td class="hidden-xs">
+                            这是XX类问题，包括。。。
+                        </td>
+                        <td >
+                            <a class="edit-row" href="#">编辑</a>
+                        </td>
+                        <td >
+                            <a class="delete-row" href="#">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            xyd001
+                        </td>
+                        <td>
+                            问题111
+                        </td>
+                        <td>
+                            xyd0011456
+                        </td>
+                        <td>
+                            18568592365
+                        </td>
+                        <td class="hidden-xs">
+                            2017-1-18 11:15
+                        </td>
+                        <td class="hidden-xs">
+                            这是XX类问题，包括。。。
+                        </td>
+                        <td >
+                            <a class="edit-row" href="#">编辑</a>
+                        </td>
+                        <td >
+                            <a class="delete-row" href="#">删除</a>
+                        </td>
+                    </tr><tr>
+                        <td>
+                            xyd001
+                        </td>
+                        <td>
+                            问题111
+                        </td>
+                        <td>
+                            xyd0011456
+                        </td>
+                        <td>
+                            18568592365
+                        </td>
+                        <td class="hidden-xs">
+                            2017-1-18 11:15
+                        </td>
+                        <td class="hidden-xs">
+                            这是XX类问题，包括。。。
+                        </td>
+                        <td >
+                            <a class="edit-row" href="#">编辑</a>
+                        </td>
+                        <td >
+                            <a class="delete-row" href="#">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            xyd001
+                        </td>
+                        <td>
+                            问题111
+                        </td>
+                        <td>
+                            xyd0011456
+                        </td>
+                        <td>
+                            18568592365
+                        </td>
+                        <td class="hidden-xs">
+                            2017-1-18 11:15
+                        </td>
+                        <td class="hidden-xs">
+                            这是XX类问题，包括。。。
+                        </td>
+                        <td >
+                            <a class="edit-row" href="#">编辑</a>
+                        </td>
+                        <td >
+                            <a class="delete-row" href="#">删除</a>
+                        </td>
+                    </tr><tr>
+                        <td>
+                            xyd001
+                        </td>
+                        <td>
+                            问题111
+                        </td>
+                        <td>
+                            xyd0011456
+                        </td>
+                        <td>
+                            18568592365
+                        </td>
+                        <td class="hidden-xs">
+                            2017-1-18 11:15
+                        </td>
+                        <td class="hidden-xs">
+                            这是XX类问题，包括。。。
+                        </td>
+                        <td >
+                            <a class="edit-row" href="#">编辑</a>
+                        </td>
+                        <td >
+                            <a class="delete-row" href="#">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            xyd001
+                        </td>
+                        <td>
+                            问题111
+                        </td>
+                        <td>
+                            xyd0011456
+                        </td>
+                        <td>
+                            18568592365
+                        </td>
+                        <td class="hidden-xs">
+                            2017-1-18 11:15
+                        </td>
+                        <td class="hidden-xs">
+                            这是XX类问题，包括。。。
+                        </td>
+                        <td >
+                            <a class="edit-row" href="#">编辑</a>
+                        </td>
+                        <td >
+                            <a class="delete-row" href="#">删除</a>
+                        </td>
+                    </tr><tr>
+                        <td>
+                            xyd001
+                        </td>
+                        <td>
+                            问题111
+                        </td>
+                        <td>
+                            xyd0011456
+                        </td>
+                        <td>
+                            18568592365
+                        </td>
+                        <td class="hidden-xs">
+                            2017-1-18 11:15
+                        </td>
+                        <td class="hidden-xs">
+                            这是XX类问题，包括。。。
+                        </td>
+                        <td >
+                            <a class="edit-row" href="#">编辑</a>
+                        </td>
+                        <td >
+                            <a class="delete-row" href="#">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            xyd001
+                        </td>
+                        <td>
+                            问题111
+                        </td>
+                        <td>
+                            xyd0011456
+                        </td>
+                        <td>
+                            18568592365
+                        </td>
+                        <td class="hidden-xs">
+                            2017-1-18 11:15
+                        </td>
+                        <td class="hidden-xs">
+                            这是XX类问题，包括。。。
+                        </td>
+                        <td >
+                            <a class="edit-row" href="#">编辑</a>
+                        </td>
+                        <td >
+                            <a class="delete-row" href="#">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div fragment="fragment/footer.html"></div>
+</div>
+<script type="text/javascript">
+    include("me-manager");
+</script>
+</body>
+
+</html>

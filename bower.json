@@ -1,0 +1,20 @@
+{
+  "name": "lainglixiaowu",
+  "authors": [
+    "YOMAMH <741834601@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies" : {
+    "artTemplate": "^3.0.0"
+  }
+}
