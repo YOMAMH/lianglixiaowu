@@ -1,0 +1,16 @@
+
+.searchGroup button {
+    vertical-align: inherit;
+}
+
+.searchGroup div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.searchGroup div input{
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    color: #000;
+}
